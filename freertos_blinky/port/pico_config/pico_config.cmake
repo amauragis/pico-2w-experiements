@@ -7,7 +7,7 @@ target_include_directories(pico_config INTERFACE
 )
 
 target_compile_definitions(pico_config INTERFACE
-PICO_STDIO_STACK_BUFFER_SIZE=256
+    PICO_STDIO_STACK_BUFFER_SIZE=128
 )
 target_link_libraries(pico_config INTERFACE
     pico_stdlib
