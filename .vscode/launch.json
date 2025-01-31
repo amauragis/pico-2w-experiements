@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "showDevDebugOutput": "raw",
+    "configurations": [
+        {
+            "name": "J-Link",
+            "cwd": "${workspaceRoot}",
+            "gdbPath": "gdb",
+            "executable": "${command:cmake.launchTargetPath}",
+            "servertype": "jlink",
+            "serverpath": "/usr/bin/JLinkGDBServer",
+            "armToolchainPath": "/usr/bin/",
+            "request": "launch",
+            "type": "cortex-debug",
+            "interface": "swd",
+            "serialNumber": "821010700",
+            "device": "RP2350_M33_0",
+            "svdFile": "${workspaceRoot}/vendor/pico-sdk/src/rp2350/hardware_regs/rp2350.svd",
+            "postRestartCommands": [
+                "break main",
+                "continue"
+            ]
+        },
+    ]
+}
